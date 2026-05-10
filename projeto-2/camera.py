@@ -1,0 +1,1 @@
+#Ligar/ desligar camera e tirar foto

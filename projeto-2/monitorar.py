@@ -1,0 +1,1 @@
+#Ver bateria, altitude e status

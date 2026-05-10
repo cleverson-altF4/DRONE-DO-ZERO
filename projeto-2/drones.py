@@ -1,0 +1,1 @@
+#Lista global que recebe os drones
