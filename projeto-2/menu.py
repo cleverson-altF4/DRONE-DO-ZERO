@@ -1,7 +1,7 @@
 #Funções que recebe o menu
 
-def menu():
-    print("|","-"*10," Menu ","-"*10,"|")
+def Menu():
+    print("|","-"*10," Menu ","-"*15,"|")
     print('''
           [1] - Cadastrar drone
           [2] - Listar drones
