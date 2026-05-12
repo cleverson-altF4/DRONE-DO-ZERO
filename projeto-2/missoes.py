@@ -33,8 +33,7 @@ def pousar():
             break
         
     if drone_encontrado == None:
-        print("Drone não foi encontrado")
-        
+        print("Drone não foi encontrado")   
     elif drone_encontrado['status'] == 'solo':
         print("Drone já está no chão!")
     else:
@@ -45,3 +44,31 @@ def pousar():
         print(f"Drone {drone_encontrado['nome']} pousou com sucesso!")
     
             
+def patrulhar():
+    id_buscador_patrulha = int(input("Digite o ID do drone: "))
+    drone_encontrado = None
+    
+    for drone_patrulha in drones.lista:
+        if drone_patrulha['id'] == id_buscador_patrulha:
+            drone_encontrado = drone_patrulha
+            break
+        
+    
+    if drone_encontrado == None:
+        print("Drone não encontrado")
+    elif drone_encontrado['status'] != 'voando':
+        print("O drone precisa está voando primeiro")
+    else:
+        drone_encontrado['status'] = 'patrulhando'
+        
+        while True:
+            area = input("Digite a área da patrulha: ").strip()
+            if area.isnumeric():
+                print("Não é permitido números")
+            else:
+                break
+        
+        
+        drone_encontrado['historico'].append(f"Patrulhando {area}")
+        
+        print(f"Drone {drone_encontrado['nome']} patrulhando área {area}")

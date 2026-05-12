@@ -1,7 +1,12 @@
 #Cadastrar e listar drones
 import drones
 
+def linhas():
+    print("-"*35)
+    
+
 def cadastrar_drones():
+    linhas()
     dicionario = {}
     dicionario['id'] = len(drones.lista) + 1
     dicionario['nome'] = str(input("Digite o nome do drone: ")).strip()
