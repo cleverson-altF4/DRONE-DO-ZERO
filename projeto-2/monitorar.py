@@ -1,9 +1,8 @@
 #Ver bateria, altitude e status
 import drones
-from cadastro import linhas
 
 def monitorar():
-    linhas()
+    
     busca_monitoramento = int(input("Digite o Id do monitoramento: "))
     
     drone_encontrado = None
@@ -26,6 +25,10 @@ def monitorar():
         
         print(f"Altitude: {drone_encontrado['altitude']}M")
         print(f"Status: {drone_encontrado['status']}")
-        print(f"Câmera: {drone_encontrado['camera']}")
+        if drone_encontrado['camera'] == True:
+            print("Câmera: Ligada")
+        else:
+            print("Câmera: Desligada")
+
     
     
